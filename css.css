@@ -1,0 +1,72 @@
+.jumbotron {
+	background-position: center;
+	background-image: url('travel.jpg');
+	background-size: auto 50%;
+	text-shadow: white 0.3em 0.3em 0.3em;
+	background-size: cover;
+}
+
+#row2 {
+	height: 700px;
+}
+
+#row3 {
+	display: inline block;
+	min-height: 100px;
+}
+
+#map {
+    height: 555px;
+}
+
+#weather {
+	margin: 0 auto;
+	top: -10px;
+	max-height: 555px;
+	color: royalblue;
+	float: right;
+	border: 2px;
+}
+
+#cityName {
+	color: #008080;
+}
+
+
+.text-center {
+	color: white;
+}
+
+#carResults {
+	min-height: 100px;
+}
+
+#restaurantResults {
+	float: right;
+	min-height: 100px;
+}
+
+
+* {box-sizing:border-box}
+
+h2 {
+	text-align: center;
+}
+
+input {
+	width: 150px;
+}
+
+label {
+	display: block;
+	width: 100%;
+}
+
+.form-group {
+	width: 150px;
+	float: left;
+}
+
+#btn-call {
+	margin: 0 auto;
+}

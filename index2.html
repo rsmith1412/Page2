@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Book - Alpaca My Bags</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css.css">
+
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!--jquring UI plugin-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Jumbotron On Page -->
+<div class="jumbotron">
+        <h1 class="text-center">Alpaca My Bags!</h1>
+        <p class="text-center">Your One Stop For All Travel</p>
+</div>
+
+
+  <!-- Search Bar on Page -->
+<div class="container">
+
+    <div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h3 class="panel-title">Book Car</h3>
+          </div>
+
+          <div class="panel-body">
+
+        <div class="row">
+      
+          <form>
+            
+                  <div class="col-md-4">
+
+                    <div class="ui-widget">
+                      <label for="tags">Pickup Location: </label>
+                      <input id="from">
+                    </div>
+            
+                      <div class="ui-widget">
+                      <label for="tags">Dropoff Location: </label>
+                      <input id="to">
+                  </div>
+
+                  <div class="form-group">
+
+                      <label for="dropoffTime">Driver's Age</label>
+                      <select class="form-control" id="age">
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                        <option>32</option>
+                        <option>33</option>
+                        <option>34</option>
+                        <option>35</option>
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                        <option>44</option>
+                        <option>45</option>
+                        <option>46</option>
+                        <option>47</option>
+                        <option>48</option>
+                        <option>49</option>
+                        <option>50</option>
+                        <option>51</option>
+                        <option>52</option>
+                        <option>53</option>
+                        <option>54</option>
+                        <option>55</option>
+                        <option>56</option>
+                        <option>57</option>
+                        <option>58</option>
+                        <option>59</option>
+                        <option>60</option>
+                        <option>61</option>
+                        <option>62</option>
+                        <option>63</option>
+                        <option>64</option>
+                        <option>65</option>
+                        <option>66</option>
+                        <option>67</option>
+                        <option>68</option>
+                        <option>69</option>
+                        <option>70</option>
+                        <option>71</option>
+                        <option>72</option>
+                        <option>73</option>
+                        <option>74</option>
+                        <option>75</option>
+
+                      </select>
+
+                  </div>
+
+                </div>
+
+                  <br><br>
+
+                    <div class="col-md-4">
+             
+                    <div class="form-group">
+                      <label for="depart">Pickup Date: </label>
+                      <input type="text" id="depart">
+                      <label for="pickupTime">Hour (24h)</label><br>
+                      <select class="form-control" id="hrUp">
+                        <option>00</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                      </select>
+                      <label for="pickupTime">Min (15 min interval)</label>
+                      <select class="form-control" id="minUp">
+                        <option>00</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+                    
+                    <div class="form-group">
+                      <label for="return">Dropoff Date: </label>
+
+                      <input type="text" id="return">
+
+                      <label for="dropoffTime">Hour (24h)</label>
+
+                      <select class="form-control" id="hrOff">
+                        <option>00</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                  
+                      </select>
+
+                      <label for="dropoffTime">Min (15 min interval)</label>
+
+                      <select class="form-control" id="minOff">
+                        <option>00</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                      </select>
+                    </div>
+              
+              </div>
+            </form>
+        </div>
+
+        <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12">
+    
+              <button class="btn btn-info btn-lg text-center" id="btn-call">Search Cars</button>
+
+          </div>  
+
+        </div>
+              
+        </div>
+
+              </div>
+
+      </div>
+
+    </div>
+
+        <div class="col-md-12">
+        <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Car Results</h3>
+              </div>
+
+              <div class="panel-body">
+
+                <div id="carResults"></div>
+
+              </div>
+
+          </div>
+
+      
+
+        </div>
+
+</div>
+
+      
+
+<script type="text/javascript" src="logic.js"></script>
+
+</body>
+</html>
